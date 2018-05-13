@@ -1,12 +1,12 @@
 document.getElementById("run-button").onclick = function() {
-  document.getElementById("result-block").style.backgroundColor = "white";
-  document.getElementById(
-    "result-iframe"
-  ).srcdoc = `<!DOCTYPE html><html><head><meta charset="UTF-8"><title>result</title><style>${
+  document.getElementById('result-header-text').style.display = 'none';
+  document.getElementById("result-iframe").srcdoc = `<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>result</title><style>body{background-color:#fff;}${
     document.getElementById("css-code-area").value
-  }</style></head><body onload="${
+  }</style><script>window.onload=function(){${
     document.getElementById("js-code-area").value
-  }">${document.getElementById("html-code-area").value}</body></html>`;
+  }};</script></head><body>${
+    document.getElementById("html-code-area").value
+  }</body></html>`;
   // another way -> iframeLink.src = 'data:text/html;charset=utf-8,' + encodeURI(htmlCode);
 };
 
