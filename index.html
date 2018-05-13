@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>JSFiddle on [the] minimals</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/script.js" defer></script>
+</head>
+
+<body>
+    <div id="container">
+        <div id="nav-panel">
+            <span>Web Sandbox</span>
+            <button id="run-button">Run</button>
+            <button id="save-button">Save</button>
+            <button id="clear-button">Clear</button>
+            <button id="download-button">Download</button>
+        </div>
+        <div id="html-block" class="block">
+            <div class="block-header-text">HTML</div>
+            <textarea spellcheck="false" id="html-code-area" class="code-area" placeholder="Write your HTML code here. It will be placed inside the &lsaquo;body&rsaquo; tag."></textarea>
+        </div>
+        <div id="css-block" class="block">
+            <div class="block-header-text">CSS</div>
+            <textarea spellcheck="false" id="css-code-area" class="code-area" placeholder="Write your CSS code here..."></textarea>
+        </div>
+        <div id="js-block" class="block">
+            <div class="block-header-text">JavaScript</div>
+            <textarea spellcheck="false" id="js-code-area" class="code-area" placeholder="Write your JavaScript code here. It will be executed after &quot;onload&quot; body event."></textarea>
+        </div>
+        <div id="result-block" class="block">
+            <iframe id="result-iframe" sandbox="allow-forms allow-scripts allow-same-origin allow-modals allow-popups">For some reason this iframe cannot be displayed.</iframe>
+        </div>
+    </div>
+</body>
+
+</html>

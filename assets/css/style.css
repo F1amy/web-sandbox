@@ -1,0 +1,113 @@
+html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#nav-panel {
+  user-select: none;
+  grid-area: nav-panel;
+  background-color: #1c2128;
+}
+
+#html-block {
+  grid-area: html-block;
+  border: solid #2d333b;
+  border-width: 0 1px 1px 0;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+#css-block {
+  grid-area: css-block;
+  border: solid #2d333b;
+  border-width: 0 0 1px 1px;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+#js-block {
+  grid-area: js-block;
+  border: solid #2d333b;
+  border-width: 1px 1px 0 0;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+#result-block {
+  position: relative;
+  box-sizing: border-box;
+  grid-area: result-block;
+  border: solid #2d333b;
+  border-width: 1px 0 0 1px;
+  background-color: #20262e;
+}
+
+#container {
+  display: grid;
+  grid-template:
+    "nav-panel nav-panel" 45px
+    "html-block css-block" 1fr
+    "js-block result-block" 1fr;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  height: 100%;
+  justify-content: stretch;
+}
+
+#result-iframe {
+  position: absolute;
+  border: none;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+::selection {
+  background-color: #ffffff26;
+}
+
+.code-area {
+  tab-size: 2;
+  caret-color: skyblue;
+  font-family: "Consolas", "Courier New", "monospace";
+  background-color: #20262e;
+  color: whitesmoke;
+  padding: 0 10px 10px 10px;
+  box-sizing: border-box;
+  outline: none;
+  resize: none;
+  border: none;
+  width: 100%;
+  height: 100%;
+}
+
+.block-header-text {
+  background-color: #20262e;
+  font-family: Arial, Helvetica, sans-serif;
+  color: lightgrey;
+  padding: 10px;
+}
+
+#nav-panel button {
+  height: 100%;
+  cursor: pointer;
+  box-sizing: border-box;
+  margin: 0 10px 0 10px;
+  color: lightgrey;
+  outline: none;
+  border: none;
+  background-color: #1c2128;
+}
+
+#nav-panel span {
+  color: lightgrey;
+  font-size: 18px;
+  margin: 0 12px 0 12px;
+  vertical-align: middle;
+  font-family: Arial, Helvetica, sans-serif;
+}
